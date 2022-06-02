@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.*
@@ -40,14 +41,22 @@ class MainActivity : ComponentActivity() {
                             PageA(navController)
                         }
                         composable(
-                            "page_b/{money}",
+                            "page_b/{money}?bonus={bonus}",
                             arguments = listOf(
                                 navArgument("money"){
                                     type = NavType.IntType
+                                },
+                                navArgument("bonus"){
+                                    type = NavType.IntType
+                                    defaultValue = 0
                                 }
                             )
                         ){backStackEntry->
-                            PageB(navController,backStackEntry.arguments?.getInt("money"),)
+                            PageB(
+                                navController,
+                                backStackEntry.arguments?.getInt("money"),
+                                backStackEntry.arguments?.getInt("bonus"),
+                            )
                         }
                     }
                 }
@@ -59,6 +68,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun PageA(navController: NavHostController) {
     var money by remember { mutableStateOf(0) }
+    var sendBonus by remember { mutableStateOf(false) }
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -77,6 +87,18 @@ fun PageA(navController: NavHostController) {
                 keyboardType = KeyboardType.Number
             )
         )
+        Row(
+            verticalAlignment = Alignment.CenterVertically
+        ){
+            Text("Bonus")
+            Checkbox(
+                checked = sendBonus,
+                onCheckedChange = {
+                    sendBonus = it
+                }
+            )
+        }
+
         Text(
             "Page A: Send Money",
             color = Color(0xfff44336),
@@ -86,7 +108,12 @@ fun PageA(navController: NavHostController) {
 
         Button(
             onClick = {
-                navController.navigate("page_b/$money")
+                if(!sendBonus){
+                    navController.navigate("page_b/$money")
+                }
+                else{
+                    navController.navigate("page_b/$money?bonus=50")
+                }
             },
             colors = ButtonDefaults.buttonColors(
                 backgroundColor = Color(0xfff44336),
@@ -98,14 +125,14 @@ fun PageA(navController: NavHostController) {
     }
 }
 @Composable
-fun PageB(navController: NavHostController, receivedMoney: Int?) {
+fun PageB(navController: NavHostController, receivedMoney: Int?, bonus: Int?) {
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ){
         Text(
-            "Page B: received money $receivedMoney",
+            "Page B: received money $receivedMoney ${if((bonus?:0)>0) "got $bonus bonus" else "): no bonus this month"}",
             color = Color(0xfff44336),
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold
