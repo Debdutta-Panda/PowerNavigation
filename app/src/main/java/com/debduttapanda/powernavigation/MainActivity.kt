@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -18,6 +19,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.debduttapanda.powernavigation.ui.theme.PowerNavigationTheme
+import kotlinx.coroutines.delay
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,18 +51,25 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun PageA(navController: NavHostController) {
+    LaunchedEffect(key1 = Unit){
+        delay(4000)
+        navController.navigate("page_b")
+    }
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ){
+        CircularProgressIndicator(
+            color = Color(0xfff44336)
+        )
         Text(
             "Page A",
             color = Color(0xfff44336),
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold
         )
-        Button(
+        /*Button(
             onClick = {
                 navController.navigate("page_b")
             },
@@ -70,7 +79,7 @@ fun PageA(navController: NavHostController) {
             )
         ) {
             Text("Go to Page B")
-        }
+        }*/
     }
 }
 @Composable
