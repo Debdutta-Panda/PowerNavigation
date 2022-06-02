@@ -88,7 +88,8 @@ fun PageB(navController: NavHostController) {
         )
         Button(
             onClick = {
-                navController.navigate("page_a")
+                //navController.navigate("page_a")//not good to go back
+                navController.navigateUp()//use navigateUp instead
             },
             colors = ButtonDefaults.buttonColors(
                 backgroundColor = Color(0xfff44336),
