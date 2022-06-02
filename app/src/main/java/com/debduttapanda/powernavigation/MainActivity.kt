@@ -69,17 +69,6 @@ fun PageA(navController: NavHostController) {
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold
         )
-        /*Button(
-            onClick = {
-                navController.navigate("page_b")
-            },
-            colors = ButtonDefaults.buttonColors(
-                backgroundColor = Color(0xfff44336),
-                contentColor = Color.White
-            )
-        ) {
-            Text("Go to Page B")
-        }*/
     }
 }
 @Composable
