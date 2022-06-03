@@ -11,6 +11,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
@@ -22,16 +23,12 @@ fun PageB(
     receivedMoney: Int?,
     bonus: Int?
 ) {
-    LaunchedEffect(key1 = pageBViewModel.navigationTrigger.value){
-        if(pageBViewModel.navigationTrigger.value==0L){
-            return@LaunchedEffect
-        }
-        navController
-            .previousBackStackEntry
-            ?.savedStateHandle
-            ?.set("totalReceived",(receivedMoney?:0)+(bonus?:0))
-        navController.navigateUp()
-        pageBViewModel.onNavigated()
+    val owner = LocalLifecycleOwner.current
+    LaunchedEffect(key1 = Unit){
+        pageBViewModel.setArguments(receivedMoney,bonus)
+    }
+    LaunchedEffect(key1 = pageBViewModel.navigation.value){
+        pageBViewModel.navigation.forward(navController,owner)
     }
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -39,7 +36,7 @@ fun PageB(
         verticalArrangement = Arrangement.Center
     ){
         Text(
-            "Page B: received money $receivedMoney ${if((bonus?:0)>0) "got $bonus bonus" else "): no bonus this month"}",
+            "Page B: received money ${pageBViewModel.receivedMoney.value} ${if(pageBViewModel.bonus.value>0) "got $bonus bonus" else "): no bonus this month"}",
             color = Color(0xfff44336),
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold

@@ -8,10 +8,10 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.sp
@@ -19,27 +19,10 @@ import androidx.navigation.NavHostController
 
 @Composable
 fun PageA(navController: NavHostController, pageAViewModel: PageAViewModel) {
-    LaunchedEffect(key1 = pageAViewModel.navigationTrigger.value){
-        if(pageAViewModel.navigationTrigger.value==0L){
-            return@LaunchedEffect
-        }
-        navController
-            .currentBackStackEntry
-            ?.savedStateHandle
-            ?.remove<Int>("totalReceived")
-        if(!pageAViewModel.sendBonus.value){
-            navController.navigate("page_b/${pageAViewModel.money.value}")
-        }
-        else{
-            navController.navigate("page_b/${pageAViewModel.money.value}?bonus=50")
-        }
-        pageAViewModel.onNavigated()
+    val owner = LocalLifecycleOwner.current
+    LaunchedEffect(key1 = pageAViewModel.navigation.value){
+        pageAViewModel.navigation.forward(navController,owner)
     }
-
-    val result = navController
-        .currentBackStackEntry
-        ?.savedStateHandle
-        ?.getLiveData<Int>("totalReceived")?.observeAsState()
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -89,8 +72,8 @@ fun PageA(navController: NavHostController, pageAViewModel: PageAViewModel) {
         ) {
             Text("Send Money")
         }
-        if((result?.value?:0)>0){
-            Text("Acknowledgement of ${result?.value} received")
+        if((pageAViewModel.totalReceived.value)>0){
+            Text("Acknowledgement of ${pageAViewModel.totalReceived.value} received")
         }
     }
 }
