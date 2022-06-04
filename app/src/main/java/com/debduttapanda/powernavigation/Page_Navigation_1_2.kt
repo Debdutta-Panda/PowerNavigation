@@ -17,16 +17,11 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 
 @Composable
-fun PageB(
+fun Page_Navigation_1_2(
     navController: NavHostController,
-    pageBViewModel: PageBViewModel,
-    receivedMoney: Int?,
-    bonus: Int?
+    pageBViewModel: Page_Navigation_1_2_ViewModel
 ) {
     val owner = LocalLifecycleOwner.current
-    LaunchedEffect(key1 = Unit){
-        pageBViewModel.setArguments(receivedMoney,bonus)
-    }
     LaunchedEffect(key1 = pageBViewModel.navigation.value){
         pageBViewModel.navigation.forward(navController,owner)
     }
@@ -36,7 +31,7 @@ fun PageB(
         verticalArrangement = Arrangement.Center
     ){
         Text(
-            "Page B: received money ${pageBViewModel.receivedMoney.value} ${if(pageBViewModel.bonus.value>0) "got $bonus bonus" else "): no bonus this month"}",
+            "Page navigation 1_2",
             color = Color(0xfff44336),
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold
@@ -50,7 +45,7 @@ fun PageB(
                 contentColor = Color.White
             )
         ) {
-            Text("Go back and pay me again")
+            Text("Back")
         }
     }
 }

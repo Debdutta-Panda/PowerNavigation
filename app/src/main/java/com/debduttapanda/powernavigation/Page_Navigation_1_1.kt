@@ -17,34 +17,46 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 
 @Composable
-fun PageA(navController: NavHostController, pageAViewModel: PageAViewModel) {
+fun Page_Navigation_1_1(
+    navController: NavHostController,
+    pageBViewModel: Page_Navigation_1_1_ViewModel
+) {
     val owner = LocalLifecycleOwner.current
-    LaunchedEffect(key1 = pageAViewModel.navigation.value){
-        pageAViewModel.navigation.forward(navController,owner)
+    LaunchedEffect(key1 = pageBViewModel.navigation.value){
+        pageBViewModel.navigation.forward(navController,owner)
     }
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ){
-
-
         Text(
-            "Page A",
+            "Page navigation 1_1",
             color = Color(0xfff44336),
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold
         )
         Button(
             onClick = {
-                pageAViewModel.onSendClick()
+                pageBViewModel.onNextClick()
             },
             colors = ButtonDefaults.buttonColors(
                 backgroundColor = Color(0xfff44336),
                 contentColor = Color.White
             )
         ) {
-            Text("Go to nested navigation")
+            Text("Next")
+        }
+        Button(
+            onClick = {
+                pageBViewModel.onGoBack()
+            },
+            colors = ButtonDefaults.buttonColors(
+                backgroundColor = Color(0xfff44336),
+                contentColor = Color.White
+            )
+        ) {
+            Text("Back")
         }
     }
 }

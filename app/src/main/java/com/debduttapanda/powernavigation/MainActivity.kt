@@ -12,19 +12,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.compose.navigation
 import androidx.navigation.compose.rememberNavController
-import androidx.navigation.navArgument
-import androidx.navigation.navDeepLink
 import com.debduttapanda.powernavigation.ui.theme.PowerNavigationTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val pageAViewModel: PageAViewModel by viewModels()
-        val pageBViewModel: PageBViewModel by viewModels()
+        val page_Navigation_1_1_ViewModel: Page_Navigation_1_1_ViewModel by viewModels()
+        val page_Navigation_1_2_ViewModel: Page_Navigation_1_2_ViewModel by viewModels()
         setContent {
             PowerNavigationTheme {
                 Surface(
@@ -44,32 +43,26 @@ class MainActivity : ComponentActivity() {
                         ){
                             PageA(navController,pageAViewModel)
                         }
-                        composable(
-                            "page_b/{money}?bonus={bonus}",
-                            arguments = listOf(
-                                navArgument("money"){
-                                    type = NavType.IntType
-                                },
-                                navArgument("bonus"){
-                                    type = NavType.IntType
-                                    defaultValue = 0
-                                }
-                            ),
-                            deepLinks = listOf(
-                                navDeepLink {
-                                    uriPattern = "https://powernavigation.debduttapanda.com/{money}?bonus={bonus}"
-                                },
-                                navDeepLink {
-                                    uriPattern = "powernavigation://powernavigation.debduttapanda.com/{money}?bonus={bonus}"
-                                }
-                            )
-                        ){backStackEntry->
-                            PageB(
-                                navController,
-                                pageBViewModel,
-                                backStackEntry.arguments?.getInt("money"),
-                                backStackEntry.arguments?.getInt("bonus"),
-                            )
+                        navigation(
+                            route = "nested_navigation",
+                            startDestination = "nested_nav_1_1"
+                        ){
+                            composable(
+                                "nested_nav_1_1"
+                            ){backStackEntry->
+                                Page_Navigation_1_1(
+                                    navController,
+                                    page_Navigation_1_1_ViewModel
+                                )
+                            }
+                            composable(
+                                "nested_nav_1_2"
+                            ){backStackEntry->
+                                Page_Navigation_1_2(
+                                    navController,
+                                    page_Navigation_1_2_ViewModel
+                                )
+                            }
                         }
                     }
                 }
