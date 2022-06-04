@@ -3,6 +3,9 @@ package com.debduttapanda.powernavigation
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.animation.AnimatedContentScope
+import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -14,12 +17,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
-import androidx.navigation.compose.rememberNavController
 import com.debduttapanda.powernavigation.ui.theme.PowerNavigationTheme
+import com.google.accompanist.navigation.animation.AnimatedNavHost
+import com.google.accompanist.navigation.animation.composable
+import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 
 class MainActivity : ComponentActivity() {
+    @OptIn(ExperimentalAnimationApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -28,15 +32,39 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    val navController = rememberNavController()
-                    NavHost(navController = navController, startDestination = "page_a"){
+                    val navController = rememberAnimatedNavController()
+                    AnimatedNavHost(navController = navController, startDestination = "page_a"){
                         composable(
-                            "page_a"
+                            "page_a",
+                            enterTransition = {
+                                slideIntoContainer(AnimatedContentScope.SlideDirection.Left, animationSpec = tween(700))
+                            },
+                            exitTransition = {
+                                slideOutOfContainer(AnimatedContentScope.SlideDirection.Left, animationSpec = tween(700))
+                            },
+                            popEnterTransition = {
+                                slideIntoContainer(AnimatedContentScope.SlideDirection.Right, animationSpec = tween(700))
+                            },
+                            popExitTransition = {
+                                slideOutOfContainer(AnimatedContentScope.SlideDirection.Right, animationSpec = tween(700))
+                            }
                         ){
                             PageA(navController)
                         }
                         composable(
-                            "page_b"
+                            "page_b",
+                            enterTransition = {
+                                slideIntoContainer(AnimatedContentScope.SlideDirection.Left, animationSpec = tween(700))
+                            },
+                            exitTransition = {
+                                slideOutOfContainer(AnimatedContentScope.SlideDirection.Left, animationSpec = tween(700))
+                            },
+                            popEnterTransition = {
+                                slideIntoContainer(AnimatedContentScope.SlideDirection.Right, animationSpec = tween(700))
+                            },
+                            popExitTransition = {
+                                slideOutOfContainer(AnimatedContentScope.SlideDirection.Right, animationSpec = tween(700))
+                            }
                         ){
                             PageB(navController)
                         }
