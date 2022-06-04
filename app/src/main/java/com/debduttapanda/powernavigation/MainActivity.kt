@@ -17,6 +17,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import androidx.navigation.navDeepLink
 import com.debduttapanda.powernavigation.ui.theme.PowerNavigationTheme
 
 class MainActivity : ComponentActivity() {
@@ -52,6 +53,14 @@ class MainActivity : ComponentActivity() {
                                 navArgument("bonus"){
                                     type = NavType.IntType
                                     defaultValue = 0
+                                }
+                            ),
+                            deepLinks = listOf(
+                                navDeepLink {
+                                    uriPattern = "https://powernavigation.debduttapanda.com/{money}?bonus={bonus}"
+                                },
+                                navDeepLink {
+                                    uriPattern = "powernavigation://powernavigation.debduttapanda.com/{money}?bonus={bonus}"
                                 }
                             )
                         ){backStackEntry->
