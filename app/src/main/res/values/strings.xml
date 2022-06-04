@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PowerNavigation</string>
+    <string name="profile">Profile</string>
+    <string name="friends_list">FriendList</string>
 </resources>

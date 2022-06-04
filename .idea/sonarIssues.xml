@@ -13,7 +13,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/debduttapanda/powernavigation/BottomNavigationScreen.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/debduttapanda/powernavigation/MainActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/debduttapanda/powernavigation/Screen.kt">
           <value>
             <set />
           </value>

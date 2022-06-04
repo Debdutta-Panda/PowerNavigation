@@ -4,10 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.ExperimentalAnimationApi
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.Divider
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
@@ -23,23 +20,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Column {
-                        Box(
-                            modifier = Modifier
-                                .fillMaxSize()
-                                .weight(1f)
-                        ){
-                            Section1()
-                        }
-                        Divider()
-                        Box(
-                            modifier = Modifier
-                                .fillMaxSize()
-                                .weight(1f)
-                        ){
-                            Section2()
-                        }
-                    }
+                    BottomNavigationScreen()
                 }
             }
         }
