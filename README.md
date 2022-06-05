@@ -3,6 +3,8 @@
 
 https://youtu.be/3IvrxDZ9aD8
 
+https://medium.com/@debduttapanda/jetpack-compose-power-navigation-ad5b0189af0d
+
 Jetpack Compose Navigation utilize power with architectural components | All about navigation in Jetpack Compose
 
 Basic navigation
