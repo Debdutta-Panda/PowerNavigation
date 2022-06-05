@@ -182,6 +182,8 @@ https://github.com/Debdutta-Panda/PowerNavigation/tree/drawer_navigation
 https://medium.com/@debduttapanda/jetpack-compose-power-navigation-ad5b0189af0d#e7c3
 
 
+Jetpack Compose Power Navigation
+================================
 
 ![](https://miro.medium.com/max/1400/1*XiBu1TNpRjIuLA70_ueM9A.png)
 
@@ -328,7 +330,7 @@ Implement Basic Navigation
 GitHub - Debdutta-Panda/PowerNavigation
 ---------------------------------------
 
-### You can't perform that action at this time. You signed in with another tab or window. You signed out in another tab or…
+ at this time. You signed in with another tab or window. You signed out in another tab or…
 
 github.com
 
@@ -398,7 +400,7 @@ In this scenario, we can utilize the `LaunchedEffect`. It offers us a coroutine 
 GitHub - Debdutta-Panda/PowerNavigation at delayed\_navigation
 --------------------------------------------------------------
 
-### You can't perform that action at this time. You signed in with another tab or window. You signed out in another tab or…
+ at this time. You signed in with another tab or window. You signed out in another tab or…
 
 github.com
 
@@ -432,7 +434,7 @@ youtube.com
 GitHub - Debdutta-Panda/PowerNavigation at navigate\_with\_arguments
 --------------------------------------------------------------------
 
-### You can't perform that action at this time. You signed in with another tab or window. You signed out in another tab or…
+ at this time. You signed in with another tab or window. You signed out in another tab or…
 
 github.com
 
@@ -480,7 +482,7 @@ youtube.com
 GitHub - Debdutta-Panda/PowerNavigation at optional\_arguments
 --------------------------------------------------------------
 
-### You can't perform that action at this time. You signed in with another tab or window. You signed out in another tab or…
+ at this time. You signed in with another tab or window. You signed out in another tab or…
 
 github.com
 
@@ -511,7 +513,7 @@ Navigate for result
 GitHub - Debdutta-Panda/PowerNavigation at navigation\_for\_result
 ------------------------------------------------------------------
 
-### You can't perform that action at this time. You signed in with another tab or window. You signed out in another tab or…
+ at this time. You signed in with another tab or window. You signed out in another tab or…
 
 github.com
 
@@ -612,7 +614,7 @@ Let’s focus on Navigation with MVVM
 GitHub - Debdutta-Panda/PowerNavigation
 ---------------------------------------
 
-### You can't perform that action at this time. You signed in with another tab or window. You signed out in another tab or…
+ at this time. You signed in with another tab or window. You signed out in another tab or…
 
 github.com
 
@@ -706,7 +708,7 @@ There are _3 pillars_ in my mechanism:
 GitHub - Debdutta-Panda/PowerNavigation at navigation\_with\_mvvm\_improved
 ---------------------------------------------------------------------------
 
-### You can't perform that action at this time. You signed in with another tab or window. You signed out in another tab or…
+ at this time. You signed in with another tab or window. You signed out in another tab or…
 
 github.com
 
@@ -741,7 +743,7 @@ Navigation Compose supports implicit deep links that can be defined as part of t
 GitHub - Debdutta-Panda/PowerNavigation at deep\_link\_in\_navigatioin\_compose
 -------------------------------------------------------------------------------
 
-### You can't perform that action at this time. You signed in with another tab or window. You signed out in another tab or…
+ at this time. You signed in with another tab or window. You signed out in another tab or…
 
 github.com
 
@@ -841,7 +843,7 @@ The nested graph encapsulates its destinations. As with the root graph, a nested
 GitHub - Debdutta-Panda/PowerNavigation at nested\_navigation
 -------------------------------------------------------------
 
-### You can't perform that action at this time. You signed in with another tab or window. You signed out in another tab or…
+ at this time. You signed in with another tab or window. You signed out in another tab or…
 
 github.com
 
@@ -981,7 +983,7 @@ popExitTransition = **{** slideOutOfContainer(AnimatedContentScope.SlideDirectio
 GitHub - Debdutta-Panda/PowerNavigation at navigation\_animation
 ----------------------------------------------------------------
 
-### You can't perform that action at this time. You signed in with another tab or window. You signed out in another tab or…
+ at this time. You signed in with another tab or window. You signed out in another tab or…
 
 github.com
 
@@ -997,7 +999,7 @@ github.com
 GitHub - Debdutta-Panda/PowerNavigation at multi\_navigation
 ------------------------------------------------------------
 
-### You can't perform that action at this time. You signed in with another tab or window. You signed out in another tab or…
+ at this time. You signed in with another tab or window. You signed out in another tab or…
 
 github.com
 
@@ -1013,7 +1015,7 @@ github.com
 GitHub - Debdutta-Panda/PowerNavigation at bottom\_navigation
 -------------------------------------------------------------
 
-### You can't perform that action at this time. You signed in with another tab or window. You signed out in another tab or…
+ at this time. You signed in with another tab or window. You signed out in another tab or…
 
 github.com
 
@@ -1029,9 +1031,8 @@ Drawer Navigation
 GitHub - Debdutta-Panda/PowerNavigation at drawer\_navigation
 -------------------------------------------------------------
 
-### You can't perform that action at this time. You signed in with another tab or window. You signed out in another tab or…
+ at this time. You signed in with another tab or window. You signed out in another tab or…
 
 github.com
 
 ](https://github.com/Debdutta-Panda/PowerNavigation/tree/drawer_navigation)
-
