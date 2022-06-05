@@ -320,6 +320,8 @@ Dependency for Navigation
 
 Go to the module level Gradle file and add the following:
 
+`implementation "androidx.navigation:navigation-compose:2.4.2"`
+
 Implement Basic Navigation
 ==========================
 
