@@ -183,17 +183,6 @@ https://medium.com/@debduttapanda/jetpack-compose-power-navigation-ad5b0189af0d#
 
 
 
-> medium-to-markdown@0.0.3 convert
-> node index.js "https://medium.com/@debduttapanda/jetpack-compose-power-navigation-ad5b0189af0d"
-
-[![Debdutta Panda](https://miro.medium.com/fit/c/96/96/1*-Eb2mfZBRMrhJIVf8Z4z2w.png)
-
-](https://medium.com/@debduttapanda?source=post_page-----ad5b0189af0d--------------------------------)[Debdutta Panda](https://medium.com/@debduttapanda?source=post_page-----ad5b0189af0d--------------------------------)Follow
-
-Jun 2
-
-·14 min read
-
 Jetpack Compose Power Navigation
 ================================
 
