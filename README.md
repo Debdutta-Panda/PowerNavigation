@@ -182,6 +182,18 @@ https://github.com/Debdutta-Panda/PowerNavigation/tree/drawer_navigation
 https://medium.com/@debduttapanda/jetpack-compose-power-navigation-ad5b0189af0d#e7c3
 
 
+
+> medium-to-markdown@0.0.3 convert
+> node index.js "https://medium.com/@debduttapanda/jetpack-compose-power-navigation-ad5b0189af0d"
+
+[![Debdutta Panda](https://miro.medium.com/fit/c/96/96/1*-Eb2mfZBRMrhJIVf8Z4z2w.png)
+
+](https://medium.com/@debduttapanda?source=post_page-----ad5b0189af0d--------------------------------)[Debdutta Panda](https://medium.com/@debduttapanda?source=post_page-----ad5b0189af0d--------------------------------)Follow
+
+Jun 2
+
+·14 min read
+
 Jetpack Compose Power Navigation
 ================================
 
@@ -332,9 +344,7 @@ Jetpack Compose Basic Navigation
 
 ### There are various aspects of navigation.Navigation TriggerDelayed navigationTransition animationNavigation…
 
-youtube.com
-
-](https://youtube.com/shorts/yyEhIXaYeYs)
+https://youtube.com/shorts/yyEhIXaYeYs
 
 You have to declare a NavHostController
 
@@ -393,28 +403,20 @@ Delayed automatic splash navigation in jetpack compose
 
 ### There are various aspects of navigation.Navigation TriggerDelayed navigationTransition animationNavigation…
 
-youtube.com
-
-](https://youtube.com/shorts/WX0ItgSBB4M?feature=share)
+https://youtube.com/shorts/WX0ItgSBB4M?feature=share
 
 Navigate with arguments
 =======================
 
 ![](https://miro.medium.com/max/996/1*DCtHkxkFYvyDNwu5zuF5Mw.gif)Pass arguments in jetpack compose navigation
 
-[
 
 Navigation with arguments in jetpack compose
 --------------------------------------------
 
 ### Edit description
 
-youtube.com
-
-](https://youtube.com/shorts/swbuAZIfMXU?feature=share)[
-
-GitHub - Debdutta-Panda/PowerNavigation at navigate\_with\_arguments
---------------------------------------------------------------------
+https://youtube.com/shorts/swbuAZIfMXU?feature=share
 
 Explanation
 ===========
@@ -449,9 +451,7 @@ Optional arguments in Jetpack Compose
 
 ### There are various aspects of navigation.Navigation TriggerDelayed navigationTransition animationNavigation…
 
-youtube.com
-
-](https://youtube.com/shorts/eSCs2NRQJRw?feature=share)
+https://youtube.com/shorts/eSCs2NRQJRw?feature=share
 
 
 
@@ -482,9 +482,7 @@ Navigation for result in jetpack compose
 
 ### There are various aspects of navigation.Navigation TriggerDelayed navigationTransition animationNavigation…
 
-youtube.com
-
-](https://youtube.com/shorts/Tq41pnQa8PE)
+https://youtube.com/shorts/Tq41pnQa8PE
 
 To send the result back
 =======================
@@ -574,9 +572,7 @@ Navigation with MVVM in jetpack compose #short
 
 ### There are various aspects of navigation.Navigation TriggerDelayed navigationTransition animationNavigation…
 
-youtube.com
-
-](https://youtube.com/shorts/OKWuhrRc6x0?feature=share)
+https://youtube.com/shorts/OKWuhrRc6x0?feature=share
 
 Let me explain
 ==============
@@ -685,9 +681,7 @@ Deep Link Jetpack Compose Open from browser #shorts
 
 ### There are various aspects of navigation.Navigation TriggerDelayed navigationTransition animationNavigation…
 
-youtube.com
-
-](https://youtube.com/shorts/JgVcG77ZvwI?feature=share)
+https://youtube.com/shorts/JgVcG77ZvwI?feature=share
 
 Explaination
 ============
@@ -776,9 +770,7 @@ Nested navigation in jetpack compose #shorts
 
 ### There are various aspects of navigation.Navigation TriggerDelayed navigationTransition animationNavigation…
 
-youtube.com
-
-](https://youtube.com/shorts/hTXRvhTxkY0?feature=share)
+https://youtube.com/shorts/hTXRvhTxkY0?feature=share
 
 Instead of `composable` use navigation to group nested navigation composables by putting the composables inside navigation block.
 
