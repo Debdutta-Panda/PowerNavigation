@@ -19,23 +19,41 @@ Bottom Navigation
 Drawer Navigation
 
 Introduction	https://www.youtube.com/watch?v=3IvrxDZ9aD8&t=0s
+
 Agenda	https://www.youtube.com/watch?v=3IvrxDZ9aD8&t=7s
+
 Upgrade Jetpack Compose Version	https://www.youtube.com/watch?v=3IvrxDZ9aD8&t=111s
+
 Dependency to add in gradle file	https://www.youtube.com/watch?v=3IvrxDZ9aD8&t=120s
+
 Basic Navigation	https://www.youtube.com/watch?v=3IvrxDZ9aD8&t=125s
+
 Delayed Automated Splash like navigation	https://www.youtube.com/watch?v=3IvrxDZ9aD8&t=283s
+
 Navigation with arguments	https://www.youtube.com/watch?v=3IvrxDZ9aD8&t=358s
+
 Optional Arguments	https://www.youtube.com/watch?v=3IvrxDZ9aD8&t=562s
+
 Navigation for result	https://www.youtube.com/watch?v=3IvrxDZ9aD8&t=734s
+
 Navigation with MVVM	https://www.youtube.com/watch?v=3IvrxDZ9aD8&t=883s
+
 The ultimate power navigation mechanism with MVVM(Navigation Re-Invent)	https://www.youtube.com/watch?v=3IvrxDZ9aD8&t=1138s
+
 Deep link in jetpack compose navigation	https://www.youtube.com/watch?v=3IvrxDZ9aD8&t=1385s
+
 Nested Navigation	https://www.youtube.com/watch?v=3IvrxDZ9aD8&t=1600s
+
 Route, BackStack, Navigation APIs	https://www.youtube.com/watch?v=3IvrxDZ9aD8&t=1745s
+
 Navigation Animation with Accompanist library	https://www.youtube.com/watch?v=3IvrxDZ9aD8&t=2076s
+
 Multiple navigation in same page or screen or composable	https://www.youtube.com/watch?v=3IvrxDZ9aD8&t=2185s
+
 Bottom Navigation in jetpack compose	https://www.youtube.com/watch?v=3IvrxDZ9aD8&t=2297s
+
 Drawer Navigation in jetpack compose	https://www.youtube.com/watch?v=3IvrxDZ9aD8&t=2419s
+
 Medium Article about Power Navigation in Jetpack Compose	https://www.youtube.com/watch?v=3IvrxDZ9aD8&t=2539s
 
 Basic Navigation
