@@ -182,6 +182,17 @@ https://github.com/Debdutta-Panda/PowerNavigation/tree/drawer_navigation
 https://medium.com/@debduttapanda/jetpack-compose-power-navigation-ad5b0189af0d#e7c3
 
 
+> medium-to-markdown@0.0.3 convert
+> node index.js "https://medium.com/@debduttapanda/jetpack-compose-power-navigation-ad5b0189af0d"
+
+[![Debdutta Panda](https://miro.medium.com/fit/c/96/96/1*-Eb2mfZBRMrhJIVf8Z4z2w.png)
+
+](https://medium.com/@debduttapanda?source=post_page-----ad5b0189af0d--------------------------------)[Debdutta Panda](https://medium.com/@debduttapanda?source=post_page-----ad5b0189af0d--------------------------------)Follow
+
+Jun 2
+
+·14 min read
+
 Jetpack Compose Power Navigation
 ================================
 
@@ -320,23 +331,12 @@ Dependency for Navigation
 
 Go to the module level Gradle file and add the following:
 
-`implementation "androidx.navigation:navigation-compose:2.4.2"`
-
 Implement Basic Navigation
 ==========================
 
 ![](https://miro.medium.com/max/996/1*F84e8amSSg5GqgOHfJU6yQ.gif)
 
-[
 
-GitHub - Debdutta-Panda/PowerNavigation
----------------------------------------
-
- at this time. You signed in with another tab or window. You signed out in another tab or…
-
-github.com
-
-](https://github.com/Debdutta-Panda/PowerNavigation)[
 
 Jetpack Compose Basic Navigation
 --------------------------------
@@ -397,16 +397,7 @@ Often we need delayed automatic navigation. Best example is splash to home or da
 
 In this scenario, we can utilize the `LaunchedEffect`. It offers us a coroutine scope so we can have a nice `delay` and navigate mechanism.
 
-[
 
-GitHub - Debdutta-Panda/PowerNavigation at delayed\_navigation
---------------------------------------------------------------
-
- at this time. You signed in with another tab or window. You signed out in another tab or…
-
-github.com
-
-](https://github.com/Debdutta-Panda/PowerNavigation/tree/delayed_navigation)[
 
 Delayed automatic splash navigation in jetpack compose
 ------------------------------------------------------
@@ -435,12 +426,6 @@ youtube.com
 
 GitHub - Debdutta-Panda/PowerNavigation at navigate\_with\_arguments
 --------------------------------------------------------------------
-
- at this time. You signed in with another tab or window. You signed out in another tab or…
-
-github.com
-
-](https://github.com/Debdutta-Panda/PowerNavigation/tree/navigate_with_arguments)
 
 Explanation
 ===========
@@ -479,16 +464,7 @@ youtube.com
 
 ](https://youtube.com/shorts/eSCs2NRQJRw?feature=share)
 
-[
 
-GitHub - Debdutta-Panda/PowerNavigation at optional\_arguments
---------------------------------------------------------------
-
- at this time. You signed in with another tab or window. You signed out in another tab or…
-
-github.com
-
-](https://github.com/Debdutta-Panda/PowerNavigation/tree/optional_arguments)
 
 Optional arguments are specified by query param like pattern.
 
@@ -510,16 +486,7 @@ Navigate for result
 
 ![](https://miro.medium.com/max/996/1*VR6o-W8sTbSCEWE_oF89NQ.gif)Navigation for result
 
-[
 
-GitHub - Debdutta-Panda/PowerNavigation at navigation\_for\_result
-------------------------------------------------------------------
-
- at this time. You signed in with another tab or window. You signed out in another tab or…
-
-github.com
-
-](https://github.com/Debdutta-Panda/PowerNavigation/tree/navigation_for_result)[
 
 Navigation for result in jetpack compose
 ----------------------------------------
@@ -611,16 +578,7 @@ Let’s focus on Navigation with MVVM
 
 ![](https://miro.medium.com/max/1400/1*BLSMNKK7b0YyBfHnXwcObg.gif)
 
-[
 
-GitHub - Debdutta-Panda/PowerNavigation
----------------------------------------
-
- at this time. You signed in with another tab or window. You signed out in another tab or…
-
-github.com
-
-](https://github.com/Debdutta-Panda/PowerNavigation.git)[
 
 Navigation with MVVM in jetpack compose #short
 ----------------------------------------------
@@ -705,16 +663,7 @@ There are _3 pillars_ in my mechanism:
 
 ![](https://miro.medium.com/max/1400/1*cBRQdLQ887MyxzctyGpdXQ.png)Navigation Callback and Extensions![](https://miro.medium.com/max/1400/1*szOaEqFyGEJnBQFhwr1wEA.png)The executor in Composable![](https://miro.medium.com/max/1400/1*NoDUWKoO9GKD-FXG_fCS1Q.png)Callback Instance in MutableState form inside ViewModel![](https://miro.medium.com/max/1400/1*OkCBWjwx5XJOGmsJcziOig.png)Calling powerful navigation APIs inside ViewModel but in LauncedEffect scope
 
-[
 
-GitHub - Debdutta-Panda/PowerNavigation at navigation\_with\_mvvm\_improved
----------------------------------------------------------------------------
-
- at this time. You signed in with another tab or window. You signed out in another tab or…
-
-github.com
-
-](https://github.com/Debdutta-Panda/PowerNavigation/tree/navigation_with_mvvm_improved)![](https://miro.medium.com/max/1400/1*2nMJfQulXulgQP7n8ifmaw.png)
 
 Navigation **Deep Link**
 ========================
@@ -740,16 +689,7 @@ Navigation Compose supports implicit deep links that can be defined as part of t
 
 ![](https://miro.medium.com/max/1400/1*ObHF-5C5xpRHjXFmp-CIzQ.gif)Deep Link test from terminal via adb![](https://miro.medium.com/max/972/1*ABAdIPKF5PjNSEDTt5Rvvw.gif)
 
-[
 
-GitHub - Debdutta-Panda/PowerNavigation at deep\_link\_in\_navigatioin\_compose
--------------------------------------------------------------------------------
-
- at this time. You signed in with another tab or window. You signed out in another tab or…
-
-github.com
-
-](https://github.com/Debdutta-Panda/PowerNavigation/tree/deep_link_in_navigatioin_compose)[
 
 Deep Link Jetpack Compose Open from browser #shorts
 ---------------------------------------------------
@@ -840,16 +780,7 @@ Destinations can be grouped into a [nested graph](https://developer.android.com/
 
 The nested graph encapsulates its destinations. As with the root graph, a nested graph must have a destination identified as the start destination by its route. This is the destination that is navigated to when you navigate to the route associated with the nested graph.
 
-[
 
-GitHub - Debdutta-Panda/PowerNavigation at nested\_navigation
--------------------------------------------------------------
-
- at this time. You signed in with another tab or window. You signed out in another tab or…
-
-github.com
-
-](https://github.com/Debdutta-Panda/PowerNavigation/tree/nested_navigation)[
 
 Nested navigation in jetpack compose #shorts
 --------------------------------------------
@@ -980,61 +911,24 @@ popExitTransition = **{** slideOutOfContainer(AnimatedContentScope.SlideDirectio
 **}**
 ```
 
-[
 
-GitHub - Debdutta-Panda/PowerNavigation at navigation\_animation
-----------------------------------------------------------------
-
- at this time. You signed in with another tab or window. You signed out in another tab or…
-
-github.com
-
-](https://github.com/Debdutta-Panda/PowerNavigation/tree/navigation_animation)
 
 **_Multiple Simultaneous Independent Nested Separate Navigations_** on the same page
 ====================================================================================
 
 ![](https://miro.medium.com/max/996/1*1l-zodvAXjqs59q_VxVshA.gif)Multiple navigation in same page
 
-[
 
-GitHub - Debdutta-Panda/PowerNavigation at multi\_navigation
-------------------------------------------------------------
-
- at this time. You signed in with another tab or window. You signed out in another tab or…
-
-github.com
-
-](https://github.com/Debdutta-Panda/PowerNavigation/tree/multi_navigation)
 
 **Bottom Navigation**
 =====================
 
 ![](https://miro.medium.com/max/996/1*cdqbwEE911d6QJkHct_u8Q.gif)Bottom Navigation in Jetpack Compose
 
-[
 
-GitHub - Debdutta-Panda/PowerNavigation at bottom\_navigation
--------------------------------------------------------------
-
- at this time. You signed in with another tab or window. You signed out in another tab or…
-
-github.com
-
-](https://github.com/Debdutta-Panda/PowerNavigation/tree/bottom_navigation)
 
 Drawer Navigation
 =================
 
 ![](https://miro.medium.com/max/996/1*7joY9_KlOvZ3RXpHdrw18w.gif)Drawer Navigation in Jetpack Compose
 
-[
-
-GitHub - Debdutta-Panda/PowerNavigation at drawer\_navigation
--------------------------------------------------------------
-
- at this time. You signed in with another tab or window. You signed out in another tab or…
-
-github.com
-
-](https://github.com/Debdutta-Panda/PowerNavigation/tree/drawer_navigation)
