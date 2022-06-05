@@ -22,7 +22,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
-import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
@@ -57,16 +56,10 @@ fun BottomNavigationScreen(){
                         selected = currentDestination?.hierarchy?.any { it.route == screen.route } == true,
                         onClick = {
                             navController1.navigate(screen.route) {
-                                // Pop up to the start destination of the graph to
-                                // avoid building up a large stack of destinations
-                                // on the back stack as users select items
                                 popUpTo(navController1.graph.findStartDestination().id) {
                                     saveState = true
                                 }
-                                // Avoid multiple copies of the same destination when
-                                // reselecting the same item
                                 launchSingleTop = true
-                                // Restore state when reselecting a previously selected item
                                 restoreState = true
                             }
                         }
@@ -90,7 +83,7 @@ fun BottomNavigationScreen(){
                 popExitTransition = {
                     slideOutOfContainer(AnimatedContentScope.SlideDirection.Right, animationSpec = tween(700))
                 }
-            ) { Profile(navController1) }
+            ) { Profile() }
             composable(
                 Screen.FriendsList.route,
                 enterTransition = {
@@ -105,7 +98,7 @@ fun BottomNavigationScreen(){
                 popExitTransition = {
                     slideOutOfContainer(AnimatedContentScope.SlideDirection.Right, animationSpec = tween(700))
                 }
-            ) { FriendList(navController1) }
+            ) { FriendList() }
         }
     }
 }
@@ -119,7 +112,7 @@ fun getIcon(screen: Screen): ImageVector {
 }
 
 @Composable
-fun Profile(navController1: NavHostController) {
+fun Profile() {
     Box(
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
@@ -144,7 +137,7 @@ fun Profile(navController1: NavHostController) {
     }
 }
 @Composable
-fun FriendList(navController1: NavHostController) {
+fun FriendList() {
     Box(
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
