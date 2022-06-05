@@ -190,7 +190,7 @@ Jetpack Compose Power Navigation
 
 In this article, we will discuss everything about Navigation in **Jetpack Compose** and utilizing the **power** of **navigation**.
 
-[Move to Power Directly](#601c)
+https://youtu.be/3IvrxDZ9aD8
 
 Motive
 ======
